@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "CommonOSLog",
     platforms: [
-        .macOS(.v10_12),
+        .macOS(.v10_14),
         .iOS(.v12),
     ],
     products: [
