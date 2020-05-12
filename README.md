@@ -1,6 +1,7 @@
 # CommonOSLog
+![Swift](https://github.com/MainasuK/CommonOSLog/workflows/Swift/badge.svg)
 
-Common log tools from os.framework
+Common log tool using the os.framework
 
 ## Usage
 
@@ -12,7 +13,10 @@ Common log tools from os.framework
 
 ### Example 
 ```swift
-os_log(.info, log: .logic, "%{public}s[%{public}ld], %{public}s: %s", ((#file as NSString).lastPathComponent), #line, #function, "Hello")
+os_log(.info, log: .debug, "%{public}s[%{public}ld], %{public}s: deinit", ((#file as NSString).lastPathComponent), #line, #function)
+os_log(.info, log: .layout, "%{public}s[%{public}ld], %{public}s: view size: %s", ((#file as NSString).lastPathComponent), #line, #function, view.size.debugDescription)
+os_log(.info, log: .logic, "%{public}s[%{public}ld], %{public}s: dataSource updated", ((#file as NSString).lastPathComponent), #line, #function)
+os_log(.info, log: .interaction, "%{public}s[%{public}ld], %{public}s: user input: %s", ((#file as NSString).lastPathComponent), #line, #function, textField.text.debugDescription)
 ```
 
 ## License
