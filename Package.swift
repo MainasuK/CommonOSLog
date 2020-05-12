@@ -14,6 +14,10 @@ let package = Package(
         .library(
             name: "CommonOSLog",
             targets: ["CommonOSLog"]),
+        .library(
+            name: "CommonOSLogDynamic",
+            type: .dynamic,
+            targets: ["CommonOSLog"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.

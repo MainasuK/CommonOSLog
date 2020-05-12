@@ -3,18 +3,18 @@ import Foundation
 
 extension OSLog {
     
-    static var subsystem = Bundle.main.bundleIdentifier!
+    public static var subsystem = Bundle.main.bundleIdentifier!
     
     public static let debug: OSLog = {
         #if DEBUG
-        return OSLog(subsystem: subsystem, category: "debug")
+        return OSLog(subsystem: subsystem + ".debug", category: "debug")
         #else
         return OSLog.disabled
         #endif
     }()
     
-    public static let layout      = OSLog(subsystem: subsystem, category: "layout")
-    public static let logic       = OSLog(subsystem: subsystem, category: "logic")
-    public static let interaction = OSLog(subsystem: subsystem, category: "interaction")
+    public static let layout      = OSLog(subsystem: subsystem + ".layout", category: "layout")
+    public static let logic       = OSLog(subsystem: subsystem + ".logic", category: "logic")
+    public static let interaction = OSLog(subsystem: subsystem + ".interaction", category: "interaction")
     
 }
