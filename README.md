@@ -8,7 +8,7 @@ Common log tool using the os.framework
 ### Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/mainasuk/CommonOSLog.git", from: "0.1.0"),
+.package(url: "https://github.com/mainasuk/CommonOSLog.git", from: "1.0.0"),
 ```
 
 ### Example 
@@ -16,9 +16,6 @@ Common log tool using the os.framework
 
 #### iOS 14 (since 1.0.0)
 ```swift
-import os.log
-
-let logger = Logger.create(system: "Database", category: "Account")
 
 // Debug:
 // .trace, .info
@@ -30,6 +27,8 @@ let logger = Logger.create(system: "Database", category: "Account")
 // .error, .warning
 // Fault or Bug:
 // .critical, .fault
+
+import os.log
 
 let logger = Logger.create(system: "UnitTests", category: "Test")
 logger.info("\((#file as NSString).lastPathComponent, privacy: .public)[\(#line, privacy: .public)], \(#function, privacy: .public): Hello")
